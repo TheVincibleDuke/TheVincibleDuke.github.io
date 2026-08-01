@@ -12,6 +12,23 @@ Title: Clippsly Audio Downloader
 </head>
 <body>
 <h1>Clippsly Audio Downloader</h1>
+<form id="downloader">
+  <label for="userInput">Enter Track ID:</label>
+  <input type="text" id="userInput" required>
+  
+  <button type="submit">Submit</button>
+</form>
+<script>
+  const form = document.getElementById('downloader');
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const userInputValue = document.getElementById('userInput').value;
+    getTrack(userInputValue);
+  });
 
+  function getTrack(data) {
+    alert("You entered: " + data);
+  }
+</script>
 </body>
 </html>
